@@ -96,8 +96,8 @@ class Model
         $value = $return[self::VALUE_KEY] ?? null;
         switch ($return[self::TYPE_KEY] ?? null) {
             case 'ref':
-                $ret = $this->found_values[implode("~", $value)] ?? $this->drill($this->get($value));
-                $this->found_values[implode("~", $value)] = $ret;
+                $ret = $this->found_values[serialize($value)] ?? $this->drill($this->get($value));
+                $this->found_values[serialize($value)] = $ret;
                 break;
             case 'env':
                 $value = $this->drill($value);
