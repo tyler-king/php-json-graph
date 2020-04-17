@@ -2,9 +2,6 @@
 
 namespace JSONGraph;
 
-//to do: bugs to check would be recursive hell and invalid keys
-//to do: replace switch with Model Types
-
 /**
  * Base model class that accepts json array to graph and array of constants to include 
  */
